@@ -1,20 +1,26 @@
 Rails.application.routes.draw do
 
-  
 
-  get 'reservations/index'
 
-  get 'reservations/show'
+  # get 'homepage/index'
+  #
+  # get 'reservations/index'
+  #
+  # get 'reservations/show'
+  #
+  # get 'reservations/new'
+  #
+  # get 'reservations/edit'
+  #
+  # get 'reservations/update'
+  #
+  # get 'reservations/create'
+  #
+  # get 'reservations/destroy'
 
-  get 'reservations/new'
+root 'homepage#index'
 
-  get 'reservations/edit'
-
-  get 'reservations/update'
-
-  get 'reservations/create'
-
-  get 'reservations/destroy'
+resources :reservations
 
 resources :restaurants, only: [:new, :show, :create, :index]
 
