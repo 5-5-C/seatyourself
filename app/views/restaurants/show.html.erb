@@ -1,1 +1,16 @@
-<%= link_to "Back to Restaurants", restaurants_url %>
+<h3><%= @restaurant.name %></h1>
+
+  <p><%= @restaurant.description %></p>
+
+  <% if current_user %>
+  	<h4>Create a Reservation</h4>
+
+  	<% else %>
+
+    <h4>Please <%=(link_to 'Log In', new_session_path) %> to make a reservation</h4>
+
+  	<% end %>
+
+
+
+  <h4><%= link_to "Back to Restaurants", restaurants_path %></h4>
