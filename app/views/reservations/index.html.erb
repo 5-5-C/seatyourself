@@ -1,0 +1,9 @@
+<h2><%= current_user.name %>'s Reservations</h2>
+
+	<% @reservation.each do |reservation| %>
+
+			<p><b>Restaurant: <%= reservation.restaurant.name %></b></p>
+				<p>Time: <%= reservation.time.to_formatted_s(:time) %></p>
+				<p>Date: <%= reservation.time.to_formatted_s(:day) %>.</p>
+
+	<% end %>
