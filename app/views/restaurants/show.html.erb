@@ -3,7 +3,7 @@
   <p><%= @restaurant.description %></p>
 
   <% if current_user %>
-  	<h4>Create a Reservation</h4>
+  	<h4><%= (link_to 'Book Reservation', new_reservation_path)%></h4>
 
   	<% else %>
 

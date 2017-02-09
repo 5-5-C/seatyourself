@@ -1,4 +1,6 @@
 class ReservationsController < ApplicationController
+
+  
   def index
     @reservation = Reservation.all
     @restaurant = Restaurant.all
