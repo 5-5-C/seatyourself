@@ -6,7 +6,7 @@ resources :restaurants
 
 resources :users, only: [:new, :create]
 
-resources :sessions, only: [:create, :destroy]
+resources :sessions, only: [:new, :create, :destroy]
 
 resources :reservations, only: [:index, :show, :destroy, :update, :edit]
 

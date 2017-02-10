@@ -1,2 +1,6 @@
-<h1>Reservations#show</h1>
-<p>Find me in app/views/reservations/show.html.erb</p>
+<h1>Reservation Info</h4>
+
+<p>Name: <%= current_user.name %>
+<p>Restaurant: <%= @reservation.restaurant.name %></p>
+<p>Time: <%= @reservation.time.to_formatted_s(:time) %></p>
+<p>Date: <%= @reservation.date.to_formatted_s(:long_ordinal) %></p>
