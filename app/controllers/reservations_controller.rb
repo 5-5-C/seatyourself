@@ -1,10 +1,11 @@
 class ReservationsController < ApplicationController
+  before_action :load_restaurant, except: :index
 
-  
-  def index
-    @reservation = Reservation.all
-    @restaurant = Restaurant.all
-  end
+
+   def index
+     @reservation = Reservation.all
+     @restaurant = Restaurant.all
+   end
 
   def show
     @reservation = Reservation.find(params[:id])
@@ -26,12 +27,27 @@ class ReservationsController < ApplicationController
   def create
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user = current_user
-    #define if and else statements
-
+    if @reservation.save
+      redirect_to reservations_path, notice: 'Reservation Created Successfully'
+    else render '/'
+    end
   end
 
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
   end
+
+private
+
+  def reservation_params
+    params.require(:reservation).permit(:date, :time, :restaurant_id)
+  end
+
+  def load_restaurant
+
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
+
 end
