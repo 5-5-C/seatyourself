@@ -4,9 +4,10 @@
 
 			<p><b>Restaurant: <%= reservation.restaurant.name %></b></p>
 				<p>Time: <%= reservation.time.to_formatted_s(:time) %></p>
-				<p>Date: <%= reservation.time.to_formatted_s(:day) %>.</p>
+				<p>Date: <%= reservation.date.to_formatted_s(:long_ordinal) %>.</p>
         <p><%= link_to "View Reservation", reservation_path(reservation)%>
           |<%= link_to "Edit Reservation", edit_reservation_path(reservation) %>
+          |<%= link_to "Cancel Reservation", reservation, method: :delete, data: {confirm: "Forreal?"} %>
         </p>
 
 	<% end %>
