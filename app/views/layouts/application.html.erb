@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
+  <!-- <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
       <div class="container">
         <h1>Making Reservations, Easy!</h1>
         <p><a class="btn btn-primary btn-lg" href="sessions/new" role="button">Make Reservation &raquo;</a></p>
@@ -24,21 +24,21 @@
       <h2>Grand Electric Toronto</h2>
       <p>Hip, bustling space for tacos, tunes & creative Mexican fare at communal tables. </p>
       <p><img src= "http://www.blogto.com/listings/restaurants/upload/2011/12/20111220-grand-electric-tacos.jpg"/></p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="restaurants/1" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
       <h2>W Burger</h2>
       <p>Lively spot with a wide variety of burgers & toppings (along with salads & sandwiches), plus drinks. </p>
       <p><img src= "http://torontolivings.com/wp-content/uploads/2013/10/34.jpg"/></p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="restaurants/2" role="button">View details &raquo;</a></p>
    </div>
     <div class="col-md-4">
       <h2>Electric Mudd</h2>
       <p>Kitschy BBQ joint offering smoked meats & craft beer, plus rock tunes, picnic tables & a patio.</p>
       <p><img src="http://cdn.torontolife.com/wp-content/uploads/2013/07/top-10-new-toronto-patios-intro.jpg"/></p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="restaurants/3" role="button">View details &raquo;</a></p>
     </div>
-  </div>
+  </div> -->
 
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -57,10 +57,10 @@
           <button type="submit" class="btn btn-success">Sign in</button>
         </form>
     </div>
-  </nav>
+  </nav> 
+<%= yield %>
 
-
-  p class="userinfo">
+  <p class="userinfo">
      <% if current_user %>
        Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
      <% else %>
@@ -83,8 +83,6 @@
   <% end %>
 
 
-<%= yield %>
 
-<
 </body>
 </html>
