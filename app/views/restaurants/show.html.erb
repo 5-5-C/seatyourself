@@ -2,6 +2,8 @@
 
   <p><%= @restaurant.description %></p>
   <p><%= @restaurant.address %></p>
+  <p><%= link_to image_tag(@restaurant.image), restaurant_path(@restaurant) %> </p>
+
 
   <% if current_user %>
 
