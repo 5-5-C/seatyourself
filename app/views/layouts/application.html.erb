@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <div class="jumbotron" style="background-image: url(../img/seatyourselfpic.jpg)">
+  <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
       <div class="container">
         <h1>Making Reservations, Easy!</h1>
         <p><a class="btn btn-primary btn-lg" href="sessions/new" role="button">Make Reservation &raquo;</a></p>
@@ -60,7 +60,13 @@
   </nav>
 
 
-
+  p class="userinfo">
+     <% if current_user %>
+       Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+     <% else %>
+       <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% end %>
+    </p>
 
 
 
@@ -79,12 +85,6 @@
 
 <%= yield %>
 
-<p class="userinfo">
-   <% if current_user %>
-     Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-   <% else %>
-     <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-    <% end %>
-  </p>
+<
 </body>
 </html>
