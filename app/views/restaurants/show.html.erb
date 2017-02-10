@@ -1,8 +1,13 @@
-<h3><%= @restaurant.name %></h3>
+<div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
+<h1 class="container"><%= @restaurant.name %></h1>
+</div>
 
-  <p><%= @restaurant.description %></p>
-  <p><%= @restaurant.address %></p>
-  <p><%= link_to image_tag(@restaurant.image), restaurant_path(@restaurant) %> </p>
+
+
+  <!-- <h1><b><%= @restaurant.description %></b></h1>
+  <h2><%= @restaurant.address %></h2>
+  <p><%= link_to image_tag(@restaurant.image), restaurant_path(@restaurant) %> </p> -->
+</br>
 
 
   <% if current_user %>
