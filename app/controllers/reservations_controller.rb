@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :load_restaurant, except: :index
+  before_action :load_restaurant, except: [:index, :edit, :destroy, :update, :show]
 
 
    def index
@@ -21,7 +21,12 @@ class ReservationsController < ApplicationController
 
   def update
     @reservation = Reservation.find(params[:id])
-    #define if and else statements...later
+
+    if @reservation.update_attributes(reservation_params)
+  redirect_to reservations_path
+    else
+  render 'edit'
+    end
   end
 
   def create
