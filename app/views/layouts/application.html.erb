@@ -5,13 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
 
-  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
 
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <!-- <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
+  <!-- <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic.jpeg)">
       <div class="container">
         <h1>Making Reservations, Easy!</h1>
         <p><a class="btn btn-primary btn-lg" href="sessions/new" role="button">Make Reservation &raquo;</a></p>
@@ -61,21 +61,60 @@
   </nav>
 
 
-<!-- 
-  <footer>
-    <p>&copy; SeatYourself</p>
-  </footer> -->
 
 
 <%= yield %>
 
-  <p class="userinfo">
+<!-- <footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+           <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">iOS App</a></li>
+                <li><a href="#">Android App</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            SeatYourself
+        </p>
+    </div>
+
+    <p class="userinfo">
+       <% if current_user %>
+         Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+       <% else %>
+         <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+        <% end %>
+      </p>
+      <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
+      <% end %>
+
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
+      <% end %>
+</footer> -->
+
+
+  <!-- <p class="userinfo">
      <% if current_user %>
        Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
      <% else %>
        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
       <% end %>
-    </p>
+    </p> -->
 
 
 
@@ -83,13 +122,13 @@
 
 
 
-  <% if flash[:notice] %>
+  <!-- <% if flash[:notice] %>
     <p id="notice"><%= flash[:notice] %></p>
   <% end %>
 
   <% if flash[:alert] %>
     <p id="alert"><%= flash[:alert] %></p>
-  <% end %>
+  <% end %> -->
 
 
 

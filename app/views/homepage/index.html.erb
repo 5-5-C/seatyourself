@@ -1,50 +1,152 @@
-  <!-- <h5><%= link_to 'Restaurant Index', "/restaurants" %></h5>
-  <h5><%= link_to 'My Reservations', "/reservations" %></h5> -->
-
-  <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic2.jpeg)">
-      <div class="container">
-        <h1>Making Reservations Easy!</h1>
-        <p><a class="btn btn-primary btn-lg" href="/restaurants" role="button">Make Reservation &raquo;</a></p>
-      </div>
+<!-- <h5><%= link_to 'Restaurant Index', "/restaurants" %></h5>
+<h5><%= link_to 'My Reservations', "/reservations" %></h5> -->
+<header>
+    <nav>
+        <div class="row">
+            <div class="seatyourself">SeatYourself</div>
+            <ul class="main-nav js--main-nav">
+                <li><a href="#features">Make Reservation</a></li>
+                <li><a href="#works">How it works</a></li>
+                <li><a href="#locations">Locations</a></li>
+            </ul>
+            <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Save Your Voice<br> Make Reservations Online</h1>
+        <a class="btn btn-full js--scroll-to-plans" href="#">Book Now! </a>
+        <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more </a>
     </div>
+</header>
 
-    <div class="container">
+<section class="section-features js--section-features" id="features">
+    <div class="row">
+        <h2>A Quicker Way to Make Reservations</h2>
+        <p class="long-copy">
+            With SeatYourself, you can secure a table at your favourite locations with a click of button.  No need for awkward phone calls or being put on hold. Let us be the first step toward your awesome night!
+        </p>
+    </div>
+</section>
+
+<section class="section-steps" id="works">
   <div class="row">
-    <div class="col-md-4">
-      <h2>Grand Electric Toronto</h2>
-      <p>Hip, bustling space for tacos, tunes & creative Mexican fare at communal tables. </p>
-      <p><img src= "http://www.blogto.com/listings/restaurants/upload/2011/12/20111220-grand-electric-tacos.jpg"/></p>
-      <p><a class="btn btn-default" href="restaurants/1" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>W Burger</h2>
-      <p>Lively spot with a wide variety of burgers & toppings (along with salads & sandwiches), plus drinks. </p>
-      <p><img src= "http://torontolivings.com/wp-content/uploads/2013/10/34.jpg"/></p>
-      <p><a class="btn btn-default" href="restaurants/2" role="button">View details &raquo;</a></p>
-   </div>
-    <div class="col-md-4">
-      <h2>Electric Mudd</h2>
-      <p>Kitschy BBQ joint offering smoked meats & craft beer, plus rock tunes, picnic tables & a patio.</p>
-      <p><img src="http://cdn.torontolife.com/wp-content/uploads/2013/07/top-10-new-toronto-patios-intro.jpg"/></p>
-      <p><a class="btn btn-default" href="restaurants/3" role="button">View details &raquo;</a></p>
-    </div>
+      <h2>How it works &mdash; Simple as 1, 2, 3</h2>
   </div>
+  <div class="row">
+      <div class="col span-1-of-2 step-box" "mobile">
+          <%=image_tag("Seatyourselfmobile.png", :class => "mobile") %>
+
+      </div>
+      <div class="col span-1-of-2 step-box">
+          <div class="work-step">
+              <div>1</div>
+              <p>Sign up for our App</p>
+          </div>
+          <div class="work-step">
+              <div>2</div>
+              <p>Find your favourite restaurant and book a reservation
+              </p>
+          </div>
+          <div class="work-step">
+              <div>3</div>
+              <p>Make the trek, and enjoy!</p>
+          </div>
+          <a href="#" class="btn-app"><img src="assets/download-app.svg" alt="App Store Button"></a>
+          <a href="#" class="btn-app"><img src="assets/download-app-android.png" alt="Play Store Button"></a>
+      </div>
+  </div>
+</section>
+
+
+<!-- <div class="jumbotron" style="background-image: url(/assets/seatyourselfpic.jpeg)">
+    <div class="container">
+      <h1>Making Reservations Easy!</h1>
+      <p><a class="btn btn-primary btn-lg" href="/restaurants" role="button">Make Reservation &raquo;</a></p>
+    </div>
+  </div> -->
+
+  <div class="container" id="locations">
+<div class="row">
+  <div class="col-md-4">
+    <h2>Grand Taco</h2>
+    <p>Hip, bustling space for tacos, tunes & creative Mexican fare at communal tables. </p>
+    <p><img src= "http://www.blogto.com/listings/restaurants/upload/2011/12/20111220-grand-electric-tacos.jpg"/></p>
+    <p><a class="btn btn-default" href="restaurants/1" role="button">View details &raquo;</a></p>
+  </div>
+  <div class="col-md-4">
+    <h2>We Burger</h2>
+    <p>Lively spot with a wide variety of burgers & toppings (along with salads & sandwiches), plus drinks. </p>
+    <p><img src= "http://torontolivings.com/wp-content/uploads/2013/10/34.jpg"/></p>
+    <p><a class="btn btn-default" href="restaurants/2" role="button">View details &raquo;</a></p>
+ </div>
+  <div class="col-md-4">
+    <h2>Electric Sod</h2>
+    <p>Kitschy BBQ joint offering smoked meats & craft beer, plus rock tunes, picnic tables & a patio.</p>
+    <p><img src="http://cdn.torontolife.com/wp-content/uploads/2013/07/top-10-new-toronto-patios-intro.jpg"/></p>
+    <p><a class="btn btn-default" href="restaurants/3" role="button">View details &raquo;</a></p>
+  </div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+           <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">iOS App</a></li>
+                <li><a href="#">Android App</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            SeatYourself
+        </p>
+    </div>
+
+    <p class="userinfo">
+       <% if current_user %>
+         Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+       <% else %>
+         <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+        <% end %>
+      </p>
+      <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
+      <% end %>
+
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
+      <% end %>
+</footer>
+
+
+
 
 <!--
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">SeatYourself</a>
-      </div>
-      <div id="navbar">
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Password" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SeatYourself</a>
     </div>
-  </nav> -->
+    <div id="navbar">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+  </div>
+</nav> -->
